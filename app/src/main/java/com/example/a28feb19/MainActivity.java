@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "bhai Text to  dal de", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Intent intent=new Intent(MainActivity.class,secondActivity.class);
-                    intent.getStringExtra(s1);
-                    intent.getStringExtra(s2);
+                    Intent intent=new Intent(MainActivity.this,secondActivity.class);
+                    intent.putExtra("name",s1);
+                    intent.putExtra("body",s2);
+                    startActivity(intent);
                 }
             }
         });
